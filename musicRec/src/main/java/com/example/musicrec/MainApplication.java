@@ -13,6 +13,12 @@ import com.parse.PushService;
  * Parse and Facebook initializations.
  */
 public class MainApplication extends Application {
+
+    public static final String APPTAG = "AnyWall";
+
+    public static final boolean APPDEBUG = false;
+
+
   @Override
   public void onCreate() {
       super.onCreate();
@@ -24,5 +30,7 @@ public class MainApplication extends Application {
       ParseInstallation.getCurrentInstallation().saveInBackground();
       //ParseAnalytics.trackAppOpened(getIntent());
       Parse.setLogLevel(Parse.LOG_LEVEL_VERBOSE);
+
+
   }
 }

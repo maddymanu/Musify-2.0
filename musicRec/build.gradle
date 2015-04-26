@@ -29,6 +29,7 @@ dependencies {
     compile project(':facebookSDK')
     compile project(':multiChoiceAdapter')
     compile project(':slidingMenuLib')
+    compile 'com.google.android.gms:play-services:7.0.0'
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
     compile 'com.android.support:support-v4:18.0.0'
     compile files('libs/Parse-1.4.3.jar')

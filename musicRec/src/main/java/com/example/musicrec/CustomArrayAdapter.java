@@ -487,7 +487,7 @@ public class CustomArrayAdapter extends ArrayAdapter<Song> {
 //                }
 
                 try {
-                    Log.d("Albums", results.getAlbums().get(0).get("album_coverart").toString());
+//                    Log.d("Albums", results.getAlbums().get(0).get("album_coverart").toString());
                     url = results.getAlbums().get(0).get("album_coverart").toString();
                 } catch (NullPointerException e) {
                     e.printStackTrace();
@@ -495,7 +495,7 @@ public class CustomArrayAdapter extends ArrayAdapter<Song> {
 
                 if (url == null) {
                     try {
-                        Log.d("Albums", results.getAlbums().get(0).get("artist_image_url").toString());
+//                        Log.d("Albums", results.getAlbums().get(0).get("artist_image_url").toString());
                         url = results.getAlbums().get(0).get("album_coverart").toString();
                     } catch (NullPointerException e) {
                         e.printStackTrace();

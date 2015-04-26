@@ -1,11 +1,15 @@
 package com.example.musicrec;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.IntentSender;
+import android.location.Location;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,9 +31,17 @@ import com.facebook.android.FacebookError;
 import com.facebook.model.GraphUser;
 import com.facebook.widget.WebDialog;
 import com.facebook.widget.WebDialog.OnCompleteListener;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.model.LatLng;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
@@ -40,7 +52,60 @@ import java.util.Map;
 
 //THIS CLASS SHOULD YOU FB FRIENDS FEED - MOVE THE UPLOAD PART TO WELCOME ACTIVITY
 
-public class FragmentTab2 extends SherlockFragment {
+public class FragmentTab2 extends SherlockFragment implements LocationListener,
+        GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener{
+
+
+
+    private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
+
+
+    private Location currentLocation;
+    private Location lastLocation;
+    /*
+     * Constants for location update parameters
+     */
+    // Milliseconds per second
+    private static final int MILLISECONDS_PER_SECOND = 1000;
+
+    // The update interval
+    private static final int UPDATE_INTERVAL_IN_SECONDS = 5;
+
+    // A fast interval ceiling
+    private static final int FAST_CEILING_IN_SECONDS = 1;
+
+    // Update interval in milliseconds
+    private static final long UPDATE_INTERVAL_IN_MILLISECONDS = MILLISECONDS_PER_SECOND
+            * UPDATE_INTERVAL_IN_SECONDS;
+
+    // A fast ceiling of update intervals, used when the app is visible
+    private static final long FAST_INTERVAL_CEILING_IN_MILLISECONDS = MILLISECONDS_PER_SECOND
+            * FAST_CEILING_IN_SECONDS;
+
+    /*
+     * Constants for handling location results
+     */
+    // Conversion from feet to meters
+    private static final float METERS_PER_FEET = 0.3048f;
+
+    // Conversion from kilometers to meters
+    private static final int METERS_PER_KILOMETER = 1000;
+
+    // Initial offset for calculating the map bounds
+    private static final double OFFSET_CALCULATION_INIT_DIFF = 1.0;
+
+    // Accuracy for calculating the map bounds
+    private static final float OFFSET_CALCULATION_ACCURACY = 0.01f;
+
+    // Maximum results returned from a Parse query
+    private static final int MAX_POST_SEARCH_RESULTS = 20;
+
+    // Maximum post search radius for map in kilometers
+    private static final int MAX_POST_SEARCH_DISTANCE = 100;
+
+    private LocationRequest locationRequest;
+    private GoogleApiClient locationClient;
 
   public static Boolean IS_RUNNING = false;
   Map<String, String> map = new HashMap<String, String>();
@@ -60,6 +125,26 @@ public class FragmentTab2 extends SherlockFragment {
     View rootView = inflater.inflate(R.layout.tab_feed, container, false);
 
     getFacebookIdInBackground();
+
+
+      // Create a new global location parameters object
+      locationRequest = LocationRequest.create();
+
+      // Set the update interval
+      locationRequest.setInterval(UPDATE_INTERVAL_IN_MILLISECONDS);
+
+      // Use high accuracy
+      locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
+      // Set the interval ceiling to one minute
+      locationRequest.setFastestInterval(FAST_INTERVAL_CEILING_IN_MILLISECONDS);
+
+      // Create a new location client, using the enclosing class to handle callbacks.
+      locationClient = new GoogleApiClient.Builder(getActivity())
+              .addApi(LocationServices.API)
+              .addConnectionCallbacks((GoogleApiClient.ConnectionCallbacks) this)
+              .addOnConnectionFailedListener(this)
+              .build();
 
 
     Button invBtn = (Button) rootView.findViewById(R.id.invite_btn);
@@ -171,7 +256,13 @@ public class FragmentTab2 extends SherlockFragment {
       } else {
         Log.d("mIntentReonReceive", action + "/" + cmd);
         Log.d("Music", artist + ":" + album + ":" + track);
-        // everytime theres an update, push it to Parse track.
+
+        if(currentLocation != null) {
+            Log.d("Cur locations:", currentLocation.toString());
+        }
+
+
+          // everytime theres an update, push it to Parse track.
         currSong = new Song();
         currSong.setAuthor(ParseUser.getCurrentUser());
 
@@ -201,6 +292,161 @@ public class FragmentTab2 extends SherlockFragment {
 
     }
   };
+
+
+    /*
+  * In response to a request to start updates, send a request to Location Services
+  */
+    private void startPeriodicUpdates() {
+        Log.d("START PUp" , "reaching Start perioid");
+        LocationServices.FusedLocationApi.requestLocationUpdates(
+                locationClient, locationRequest, this);
+    }
+
+    /*
+     * In response to a request to stop updates, send a request to Location Services
+     */
+    private void stopPeriodicUpdates() {
+        locationClient.disconnect();
+    }
+
+    /*
+     * Get the current location
+     */
+    private Location getLocation() {
+        // If Google Play Services is available
+        if (servicesConnected()) {
+            // Get the current location
+            Log.d("GET Location:" , "Reaching get locs.");
+            return LocationServices.FusedLocationApi.getLastLocation(locationClient);
+        } else {
+            return null;
+        }
+    }
+
+
+    /*
+  * Called by Location Services when the request to connect the client finishes successfully. At
+  * this point, you can request the current location or start periodic updates
+  */
+    public void onConnected(Bundle bundle) {
+        if (MainApplication.APPDEBUG) {
+            Log.d("Connocation services", MainApplication.APPTAG);
+        }
+        Log.d("MAIN" , "REACHING ON CONNECTED");
+        currentLocation = getLocation();
+        startPeriodicUpdates();
+    }
+
+    /*
+     * Called by Location Services if the connection to the location client drops because of an error.
+     */
+    public void onDisconnected() {
+        if (MainApplication.APPDEBUG) {
+            Log.d("Dis location services", MainApplication.APPTAG);
+        }
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+        Log.i(MainApplication.APPTAG, "GoogleApiClient connection has been suspend");
+    }
+
+    /*
+     * Called by Location Services if the attempt to Location Services fails.
+     */
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+        // Google Play services can resolve some errors it detects. If the error has a resolution, try
+        // sending an Intent to start a Google Play services activity that can resolve error.
+        if (connectionResult.hasResolution()) {
+            try {
+
+                // Start an Activity that tries to resolve the error
+                connectionResult.startResolutionForResult(getActivity(), CONNECTION_FAILURE_RESOLUTION_REQUEST);
+
+            } catch (IntentSender.SendIntentException e) {
+
+                if (MainApplication.APPDEBUG) {
+                    // Thrown if Google Play services canceled the original PendingIntent
+                    Log.d(MainApplication.APPTAG, "An error occurred when connecting to location services.", e);
+                }
+            }
+        } else {
+            // If no resolution is available, display a dialog to the user with the error.
+            showErrorDialog(connectionResult.getErrorCode());
+        }
+    }
+
+
+    @Override
+    public void onStop() {
+        if (locationClient.isConnected()) {
+            stopPeriodicUpdates();
+        }
+        locationClient.disconnect();
+
+        super.onStop();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        locationClient.connect();
+    }
+
+    /*
+   * Report location updates to the UI.
+   */
+    public void onLocationChanged(Location location) {
+        currentLocation = location;
+        if (lastLocation != null
+                && geoPointFromLocation(location)
+                .distanceInKilometersTo(geoPointFromLocation(lastLocation)) < 0.01) {
+            // If the location hasn't changed by more than 10 meters, ignore it.
+            return;
+        }
+        lastLocation = location;
+        LatLng myLatLng = new LatLng(location.getLatitude(), location.getLongitude());
+
+        Log.d("Cur locations:", currentLocation.toString());
+//        if (!hasSetUpInitialLocation) {
+//            // Zoom to the current location.
+//            updateZoom(myLatLng);
+//            hasSetUpInitialLocation = true;
+//        }
+        // Update map radius indicator
+//        updateCircle(myLatLng);
+//        doMapQuery();
+//        doListQuery();
+    }
+
+    private ParseGeoPoint geoPointFromLocation(Location loc) {
+        return new ParseGeoPoint(loc.getLatitude(), loc.getLongitude());
+    }
+
+    /*
+   * Show a dialog returned by Google Play services for the connection error code
+   */
+    private void showErrorDialog(int errorCode) {
+        // Get the error dialog from Google Play services
+        Dialog errorDialog =
+                GooglePlayServicesUtil.getErrorDialog(errorCode, getActivity(),
+                        CONNECTION_FAILURE_RESOLUTION_REQUEST);
+
+        // If Google Play services can provide an error dialog
+        if (errorDialog != null) {
+
+            // Create a new DialogFragment in which to show the error dialog
+            ErrorDialogFragment errorFragment = new ErrorDialogFragment();
+
+            // Set the dialog in the DialogFragment
+            errorFragment.setDialog(errorDialog);
+
+            // Show the error dialog in the DialogFragment
+            errorFragment.show(getFragmentManager(), MainApplication.APPTAG);
+        }
+    }
 
   @SuppressWarnings("deprecation")
   private static void getFacebookIdInBackground() {
@@ -298,4 +544,42 @@ public class FragmentTab2 extends SherlockFragment {
 
   }
 
+
+    public static class ErrorDialogFragment extends DialogFragment {
+        private Dialog mDialog;
+
+        public ErrorDialogFragment() {
+            super();
+            mDialog = null;
+        }
+
+        public void setDialog(Dialog dialog) {
+            mDialog = dialog;
+        }
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            return mDialog;
+        }
+    }
+
+
+    private boolean servicesConnected() {
+        int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getActivity());
+
+        if (ConnectionResult.SUCCESS == resultCode) {
+            return true;
+        } else {
+            Dialog dialog = GooglePlayServicesUtil.getErrorDialog(resultCode, getActivity(), 0);
+            if (dialog != null) {
+                ErrorDialogFragment errorFragment = new ErrorDialogFragment();
+                errorFragment.setDialog(dialog);
+                errorFragment.show(getFragmentManager(), "");
+            }
+            return false;
+        }
+    }
+
 }
+
+
