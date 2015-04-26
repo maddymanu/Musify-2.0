@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/exploded-aar/com.github.manuelpeinado.multichoiceadapter/multichoiceadapter/3.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="31aeeb451f3663d3d54ffaa744d05c24790e76ba">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/classes-d5b8fcd3df96c0e5edb519868ee8ded3b80ae3a9.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/multiChoiceAdapter/build/libs/multiChoiceAdapter.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="45326f214c9bdde5152602a4e5624a40707660de">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/multiChoiceAdapter-c78644c012e33b9bd680185b2ede59d966a99645.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/libs/json_simple-1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5e303a03d04e6788dddfa3655272580ae0fc13bb">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/json_simple-1.1-c99fa9dac5598541845a2432d6cc9e2735bc3292.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/exploded-aar/com.beardedhen/androidbootstrap/1.2.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5b26560d38c480aa5c8413a9f43bd205afb123d7">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/classes-177401923eee30d1e665c21da44010748e3b2e40.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/exploded-aar/Musified1/slidingMenuLib/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="bb9a96e83d26ea47a6106bf5355695ff5499b7bb">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/classes-4cb8070a8e4db658b453edb618c2bce94e990a58.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-b5e76d016987efc002d835104414053e343c3b9e.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-d39f2ae7ca6be5550b56475b3e1f23b8e2ae23b6.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/libs/YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="29ccfbddf99584bddbaab62c0cf50dcd1c564e43">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/YouTubeAndroidPlayerApi-e87248258868c33c4c8e9b3776983165058ee42e.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/exploded-aar/com.github.manuelpeinado.multichoiceadapter/multichoiceadapter-abs/3.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e11ca6a55cb79e2ff1a2eaf241607569f5be6370">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/classes-97f5828db486ef23970ac55418bcbb585358647a.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/exploded-aar/com.actionbarsherlock/actionbarsherlock/4.4.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="af64527b748983a75de9c0756e9768b56b240a49">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/classes-ffc9ac697cc3dcdf5a1ca450b62ac6a4df8de888.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/libs/jEN.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a75550e25ddc1d5b104babd16012588005508913">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/jEN-cf31babbf2f8d8145bbec6a8cc9d098937e57d73.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/exploded-aar/com.github.asne.facebook/facebook/3.17.2/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0027a7b1c1f861403303ac4b10ac53fb6067324b">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/classes-63c6df3dc032b33a519837f9b8f17b55427d0b6e.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/classes-9b305064522185dbaf22fc5296ff1ed7e8f8740e.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/libs/Parse-1.4.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8daf146aea8cd5245bb90f802f2cd4b8dd855eca">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/Parse-1.4.3-8880b53b697fdcdd9a59e4bc844eb49b3ef23f23.jar" />
+    </item>
+    <item
+        jar="/Users/adityabansal/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.2/91c20388c9a45f62b5ed8fe0502bb76ff6251fc7/bolts-android-1.1.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="91c20388c9a45f62b5ed8fe0502bb76ff6251fc7">
+        <dex dex="/Users/adityabansal/Documents/Computer Science/Musified1/musicRec/build/intermediates/pre-dexed/debug/bolts-android-1.1.2-139c1fa3054ac02b4b5a5e47d8b147bba6393186.jar" />
+    </item>
+
+</items>

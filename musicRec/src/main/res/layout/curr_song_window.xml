@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TruitonYouTubeAPIActivity" >
+
+    <ImageView
+        android:id="@+id/songImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:minHeight="200dp"
+        android:minWidth="200dp"
+        android:paddingLeft="5dp" />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songImage"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/rdioSearch"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rdioicon"
+            android:ems="10"
+            android:onClick="openRdioSearch" />
+
+        <Button
+            android:id="@+id/spotifySearch"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/rdioSearch"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/spotifyicon"
+            android:ems="10"
+            android:onClick="openSpotifySearch" />
+
+        <Button
+            android:id="@+id/youtubeSearch"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:adjustViewBounds="true"
+            android:layout_toLeftOf="@id/spotifySearch"
+            android:background="@drawable/youtubeicon2"
+            android:ems="10"
+            android:onClick="openYoutubeSearch" />
+    </LinearLayout>
+
+</RelativeLayout>

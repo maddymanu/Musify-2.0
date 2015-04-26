@@ -1,0 +1,5 @@
+include ':androidBootstrap'
+include ':facebookSDK'
+include ':multiChoiceAdapter'
+include ':slidingMenuLib'
+include ':musicRec'

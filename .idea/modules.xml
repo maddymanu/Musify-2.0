@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Musified1.iml" filepath="$PROJECT_DIR$/Musified1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidBootstrap/androidBootstrap.iml" filepath="$PROJECT_DIR$/androidBootstrap/androidBootstrap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/facebookSDK/facebookSDK.iml" filepath="$PROJECT_DIR$/facebookSDK/facebookSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multiChoiceAdapter/multiChoiceAdapter.iml" filepath="$PROJECT_DIR$/multiChoiceAdapter/multiChoiceAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/musicRec/musicRec.iml" filepath="$PROJECT_DIR$/musicRec/musicRec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slidingMenuLib/slidingMenuLib.iml" filepath="$PROJECT_DIR$/slidingMenuLib/slidingMenuLib.iml" />
+    </modules>
+  </component>
+</project>
+

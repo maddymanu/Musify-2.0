@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.example.musicrec"
+        minSdkVersion 14
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+        debug {
+            debuggable true
+        }
+    }
+}
+
+dependencies {
+    compile 'com.github.asne.facebook:facebook:3.17.2'
+    compile 'com.github.manuelpeinado.multichoiceadapter:multichoiceadapter-abs:3.0.0'
+    compile 'com.beardedhen:androidbootstrap:+'
+    compile project(':androidBootstrap')
+    compile project(':facebookSDK')
+    compile project(':multiChoiceAdapter')
+    compile project(':slidingMenuLib')
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    compile 'com.android.support:support-v4:18.0.0'
+    compile files('libs/Parse-1.4.3.jar')
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
+    compile files('libs/jEN.jar')
+    compile files('libs/json_simple-1.1.jar')
+}
