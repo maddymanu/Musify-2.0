@@ -22,7 +22,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.StrictMode;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +34,6 @@ import android.widget.Toast;
 import com.echonest.api.v4.Artist;
 import com.echonest.api.v4.EchoNestAPI;
 import com.echonest.api.v4.Image;
-import com.echonest.api.v4.SongParams;
 import com.google.android.youtube.player.YouTubeIntents;
 import com.parse.ParseException;
 import com.parse.ParseInstallation;
@@ -121,7 +119,7 @@ public class CustomArrayAdapter extends ArrayAdapter<Song> {
         StrictMode.setThreadPolicy(policy);
 
         //initializes the API
-        en = new EchoNestAPI("FUS98WPLXFNIHZHHG");
+//        en = new EchoNestAPI("FUS98WPLXFNIHZHHG");
 
         //sets the context
         this.context = context;
@@ -429,21 +427,21 @@ public class CustomArrayAdapter extends ArrayAdapter<Song> {
                 Bitmap bm = null;
 
                 //passing in the song parameters to look for song metadata.
-                SongParams p1 = new SongParams();
-                p1.setArtist(currSong.get("artist").toString());
-                p1.setTitle(currSong.get("title").toString());
-                p1.includeTracks(); // the album art is in the track data
-                p1.setLimit(true); // only return songs that have track data
-                p1.addIDSpace("7digital-US");
+//                SongParams p1 = new SongParams();
+//                p1.setArtist(currSong.get("artist").toString());
+//                p1.setTitle(currSong.get("title").toString());
+//                p1.includeTracks(); // the album art is in the track data
+//                p1.setLimit(true); // only return songs that have track data
+//                p1.addIDSpace("7digital-US");
 
                 String title = currSong.get("title").toString();
 
                 GracenoteMetadata results = api.searchTrack(currSong.get("artist").toString(), "", title);
 //        api.sea
-                results.print();
+//                results.print();
 
 
-                Log.d("ACTUAL SOMG TITLE", title);
+//                Log.d("ACTUAL SOMG TITLE", title);
 
 //          results.getAlbum(0);
 
