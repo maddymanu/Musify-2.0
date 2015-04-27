@@ -1,5 +1,7 @@
 package com.example.musicrec;
+
 import com.parse.ParseClassName;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 
@@ -40,6 +42,13 @@ public class Song extends ParseObject{
 		put("artist", artist);
 	}
 
+    public ParseGeoPoint getLocation() {
+        return getParseGeoPoint("location");
+    }
+
+    public void setLocation(ParseGeoPoint value) {
+        put("location", value);
+    }
 	
 	public ParseUser getAuthor() {
 		return getParseUser("author");

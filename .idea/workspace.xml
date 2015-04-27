@@ -94,8 +94,8 @@
       <file leaf-file-name="FragmentTab2.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/musicRec/src/main/java/com/example/musicrec/FragmentTab2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7213116" vertical-offset="6051" max-vertical-offset="8865">
-              <caret line="337" column="16" selection-start-line="337" selection-start-column="8" selection-end-line="337" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.32824427" vertical-offset="3756" max-vertical-offset="8970">
+              <caret line="259" column="7" selection-start-line="259" selection-start-column="7" selection-end-line="259" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3819#3835#0" expanded="true" />
@@ -110,20 +110,39 @@
                 <element signature="e#7057#7058#0" expanded="true" />
                 <element signature="e#7103#7263#0" expanded="true" />
                 <element signature="e#7256#7257#0" expanded="true" />
-                <element signature="e#8499#9797#0" expanded="true" />
-                <element signature="e#9792#9793#0" expanded="true" />
-                <element signature="e#10261#10262#0" expanded="true" />
-                <element signature="e#10304#10305#0" expanded="true" />
-                <element signature="e#15030#15062#0" expanded="true" />
-                <element signature="e#15190#15703#0" expanded="true" />
-                <element signature="e#15692#15693#0" expanded="true" />
-                <element signature="e#16022#17061#0" expanded="true" />
-                <element signature="e#17049#17050#0" expanded="true" />
-                <element signature="e#17106#17138#0" expanded="true" />
-                <element signature="e#18333#18334#0" expanded="true" />
-                <element signature="e#18373#18374#0" expanded="true" />
-                <element signature="e#18458#18459#0" expanded="true" />
-                <element signature="e#18496#18497#0" expanded="true" />
+                <element signature="e#8499#9986#0" expanded="true" />
+                <element signature="e#9981#9982#0" expanded="true" />
+                <element signature="e#10450#10451#0" expanded="true" />
+                <element signature="e#10493#10494#0" expanded="true" />
+                <element signature="e#15219#15251#0" expanded="true" />
+                <element signature="e#15379#15892#0" expanded="true" />
+                <element signature="e#15881#15882#0" expanded="true" />
+                <element signature="e#16211#17250#0" expanded="true" />
+                <element signature="e#17238#17239#0" expanded="true" />
+                <element signature="e#17295#17327#0" expanded="true" />
+                <element signature="e#18522#18523#0" expanded="true" />
+                <element signature="e#18562#18563#0" expanded="true" />
+                <element signature="e#18647#18648#0" expanded="true" />
+                <element signature="e#18685#18686#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Song.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/musicRec/src/main/java/com/example/musicrec/Song.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="780">
+              <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+              <folding>
+                <element signature="e#774#775#0" expanded="true" />
+                <element signature="e#825#826#0" expanded="true" />
+                <element signature="e#877#878#0" expanded="true" />
+                <element signature="e#915#916#0" expanded="true" />
+                <element signature="e#949#950#0" expanded="true" />
+                <element signature="e#985#986#0" expanded="true" />
+                <element signature="e#1027#1028#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2118,6 +2137,7 @@
         <option value="$PROJECT_DIR$/musicRec/build.gradle" />
         <option value="$PROJECT_DIR$/musicRec/src/main/java/com/example/musicrec/MainApplication.java" />
         <option value="$PROJECT_DIR$/musicRec/src/main/java/com/example/musicrec/CustomArrayAdapter.java" />
+        <option value="$PROJECT_DIR$/musicRec/src/main/java/com/example/musicrec/Song.java" />
         <option value="$PROJECT_DIR$/musicRec/src/main/java/com/example/musicrec/FragmentTab2.java" />
       </list>
     </option>
@@ -2482,7 +2502,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="23" width="1400" height="806" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2495,7 +2515,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289855" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39130434" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35217392" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2851,14 +2871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musicRec/src/main/java/com/example/musicrec/Song.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07340946" vertical-offset="0" max-vertical-offset="613">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/musicRec/src/main/java/radams/gracenote/webapi/GracenoteMetadata.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="2370">
@@ -2925,10 +2937,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/musicRec/src/main/java/com/example/musicrec/Song.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="780">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding>
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/musicRec/src/main/java/com/example/musicrec/FragmentTab2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7213116" vertical-offset="6051" max-vertical-offset="8865">
-          <caret line="337" column="16" selection-start-line="337" selection-start-column="8" selection-end-line="337" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.32824427" vertical-offset="3756" max-vertical-offset="8970">
+          <caret line="259" column="7" selection-start-line="259" selection-start-column="7" selection-end-line="259" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3819#3835#0" expanded="true" />
@@ -2943,20 +2972,20 @@
             <element signature="e#7057#7058#0" expanded="true" />
             <element signature="e#7103#7263#0" expanded="true" />
             <element signature="e#7256#7257#0" expanded="true" />
-            <element signature="e#8499#9797#0" expanded="true" />
-            <element signature="e#9792#9793#0" expanded="true" />
-            <element signature="e#10261#10262#0" expanded="true" />
-            <element signature="e#10304#10305#0" expanded="true" />
-            <element signature="e#15030#15062#0" expanded="true" />
-            <element signature="e#15190#15703#0" expanded="true" />
-            <element signature="e#15692#15693#0" expanded="true" />
-            <element signature="e#16022#17061#0" expanded="true" />
-            <element signature="e#17049#17050#0" expanded="true" />
-            <element signature="e#17106#17138#0" expanded="true" />
-            <element signature="e#18333#18334#0" expanded="true" />
-            <element signature="e#18373#18374#0" expanded="true" />
-            <element signature="e#18458#18459#0" expanded="true" />
-            <element signature="e#18496#18497#0" expanded="true" />
+            <element signature="e#8499#9986#0" expanded="true" />
+            <element signature="e#9981#9982#0" expanded="true" />
+            <element signature="e#10450#10451#0" expanded="true" />
+            <element signature="e#10493#10494#0" expanded="true" />
+            <element signature="e#15219#15251#0" expanded="true" />
+            <element signature="e#15379#15892#0" expanded="true" />
+            <element signature="e#15881#15882#0" expanded="true" />
+            <element signature="e#16211#17250#0" expanded="true" />
+            <element signature="e#17238#17239#0" expanded="true" />
+            <element signature="e#17295#17327#0" expanded="true" />
+            <element signature="e#18522#18523#0" expanded="true" />
+            <element signature="e#18562#18563#0" expanded="true" />
+            <element signature="e#18647#18648#0" expanded="true" />
+            <element signature="e#18685#18686#0" expanded="true" />
           </folding>
         </state>
       </provider>

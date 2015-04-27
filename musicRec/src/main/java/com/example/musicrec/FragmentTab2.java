@@ -257,8 +257,11 @@ public class FragmentTab2 extends SherlockFragment implements LocationListener,
         Log.d("mIntentReonReceive", action + "/" + cmd);
         Log.d("Music", artist + ":" + album + ":" + track);
 
+       ParseGeoPoint myPoint = null;
+
         if(currentLocation != null) {
             Log.d("Cur locations:", currentLocation.toString());
+            myPoint = geoPointFromLocation(currentLocation);
         }
 
 
@@ -277,6 +280,10 @@ public class FragmentTab2 extends SherlockFragment implements LocationListener,
         } else {
           currSong.setArtist("unknown");
         }
+
+          if(myPoint != null) {
+              currSong.setLocation(myPoint);
+          }
 
         // CHANGE THIS TO ACTUALLY UPLOAD A SONG
         if(track != null && artist != null) {
