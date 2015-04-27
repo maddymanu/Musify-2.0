@@ -120,7 +120,7 @@ public final class R {
 		public static final int thumbnail_circle_minimal = 0x7f0200e1;
 	}
 	public static final class id {
-		public static final int action_settings = 0x7f090099;
+		public static final int action_settings = 0x7f09009b;
 		public static final int container = 0x7f090063;
 		public static final int dimensionsLabel = 0x7f090065;
 		public static final int image = 0x7f090066;
@@ -134,7 +134,7 @@ public final class R {
 		public static final int bootstrap_button = 0x7f03001b;
 		public static final int bootstrap_thumbnail = 0x7f03001c;
 		public static final int bootstrap_thumbnail_circle = 0x7f03001d;
-		public static final int placeholder = 0x7f030032;
+		public static final int placeholder = 0x7f030033;
 	}
 	public static final class menu {
 		public static final int main = 0x7f0e0000;
@@ -142,7 +142,7 @@ public final class R {
 	public static final class string {
 		public static final int action_settings = 0x7f0c0015;
 		public static final int app_name = 0x7f0c0018;
-		public static final int hello_world = 0x7f0c01ca;
+		public static final int hello_world = 0x7f0c01cb;
 	}
 	public static final class style {
 		public static final int AppBaseTheme = 0x7f0d0000;

@@ -41,6 +41,7 @@ public class Welcome extends SherlockFragmentActivity {
     //Store the fragment tabs for each view.
     android.support.v4.app.Fragment fragmentTab1 = new FragmentTab1();
     android.support.v4.app.Fragment fragmentTab2 = new FragmentTab2();
+    android.support.v4.app.Fragment nearbyFrag = new NearbyFragment();
 
     //stores the context
     final Context context = this;
@@ -165,14 +166,15 @@ public class Welcome extends SherlockFragmentActivity {
         Tab1.setTabListener(new TabListener(fragmentTab2));
         Tab2.setTabListener(new TabListener(fragmentTab1));
         Tab3.setTabListener(new TabListener(fragmentTab1));
-        Tab4.setTabListener(new TabListener(fragmentTab1));
+        Tab4.setTabListener(new TabListener(nearbyFrag));
         Tab5.setTabListener(new TabListener(fragmentTab1));
 
         // Add tabs to actionbar
         actionBar.addTab(Tab1);
         actionBar.addTab(Tab2);
-        actionBar.addTab(Tab3);
         actionBar.addTab(Tab4);
+        actionBar.addTab(Tab3);
+
         actionBar.addTab(Tab5);
 
     }

@@ -429,6 +429,7 @@ public class FragmentTab2 extends SherlockFragment implements LocationListener,
     }
 
     private ParseGeoPoint geoPointFromLocation(Location loc) {
+        Log.d("Original=" , loc.getLatitude() + " " + loc.getLongitude());
         return new ParseGeoPoint(loc.getLatitude(), loc.getLongitude());
     }
 

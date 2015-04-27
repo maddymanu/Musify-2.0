@@ -12,16 +12,14 @@ import com.parse.ParseException;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 //THIS CLASS SHOULD YOU FB FRIENDS FEED - MOVE THE UPLOAD PART TO WELCOME ACTIVITY
 
 public class FragmentTab1 extends SherlockFragment {
 
-  public static Boolean IS_RUNNING = false;
-  Map<String, String> map = new HashMap<String, String>();
+//  public static Boolean IS_RUNNING = false;
+//  Map<String, String> map = new HashMap<String, String>();
 
 
 
