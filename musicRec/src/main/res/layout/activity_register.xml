@@ -31,13 +31,13 @@
             android:layout_height="wrap_content"
             android:text="@string/username" />
 
-        <com.beardedhen.androidbootstrap.BootstrapEditText
+        <EditText
             android:id="@+id/register_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="text"
-            bootstrapbutton:be_roundedCorners="true" />
+             />
 
         <TextView
             android:layout_width="match_parent"
@@ -45,15 +45,15 @@
             android:layout_marginTop="3dp"
             android:text="@string/password_label" />
 
-        <com.beardedhen.androidbootstrap.BootstrapEditText
+        <EditText
             android:id="@+id/register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
-            bootstrapbutton:be_roundedCorners="true" />
+             />
 
-        <com.beardedhen.androidbootstrap.BootstrapButton
+        <Button
             android:id="@+id/sign_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,12 +61,11 @@
             android:layout_marginTop="2dp"
             android:onClick="register"
             android:text="@string/sign_up_label"
-            bootstrapbutton:bb_roundedCorners="true"
-            bootstrapbutton:bb_type="primary" />
+            />
 
     </LinearLayout>
 
-    <com.beardedhen.androidbootstrap.BootstrapButton
+    <Button
         android:id="@+id/signInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,7 +73,6 @@
         android:onClick="showLogin"
         android:text="@string/already_have_an_account_label"
         android:textSize="14sp"
-        bootstrapbutton:bb_roundedCorners="true"
-        bootstrapbutton:bb_type="primary" />
+        />
 
 </LinearLayout>

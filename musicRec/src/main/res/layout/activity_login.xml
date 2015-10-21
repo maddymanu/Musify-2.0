@@ -31,43 +31,42 @@
             android:layout_height="wrap_content"
             android:text="@string/username" />
 
-        <com.beardedhen.androidbootstrap.BootstrapEditText
+        <EditText
             android:id="@+id/login_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:ems="10"
             android:inputType="text"
-            bootstrapbutton:be_roundedCorners="true" />
+            />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/password_label" />
 
-        <com.beardedhen.androidbootstrap.BootstrapEditText
+        <EditText
             android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:ems="10"
             android:inputType="textPassword"
-            bootstrapbutton:be_roundedCorners="true" />
+            />
 
-        <com.beardedhen.androidbootstrap.BootstrapButton
+        <Button
             android:id="@+id/sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:onClick="signIn"
             android:text="@string/sign_in_label"
-            bootstrapbutton:bb_icon_left="fa-heart"
-            bootstrapbutton:bb_icon_right="fa-heart"
-            bootstrapbutton:bb_roundedCorners="true"
-            bootstrapbutton:bb_type="primary" />
+            />
+
+
     </LinearLayout>
 
-    <com.beardedhen.androidbootstrap.BootstrapButton
+    <Button
         android:id="@+id/facebookLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,17 +74,15 @@
         android:layout_marginBottom="10dp"
         android:onClick="loginUsingFacebook"
         android:text="Facebook!"
-        bootstrapbutton:bb_roundedCorners="true"
-        bootstrapbutton:bb_type="info" />
+        />
 
-    <com.beardedhen.androidbootstrap.BootstrapButton
+    <Button
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="showRegistration"
         android:text="@string/dont_have_an_account_label"
-        bootstrapbutton:bb_roundedCorners="true"
-        bootstrapbutton:bb_type="primary" />
+        />
 
 </LinearLayout>

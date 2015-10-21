@@ -1,0 +1,24 @@
+-keep class com.example.musicrec.MainApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+-keep class com.example.musicrec.MainActivity { <init>(); }
+-keep class com.example.musicrec.Welcome { <init>(); }
+-keep class com.example.musicrec.NotificationTray { <init>(); }
+-keep class com.example.musicrec.CurrSongWindow { <init>(); }
+-keep class com.example.musicrec.CurrFBUserWindow { <init>(); }
+-keep class com.example.musicrec.LoginActivity { <init>(); }
+-keep class com.example.musicrec.RegisterActivity { <init>(); }
+-keep class com.example.musicrec.FriendPicker { <init>(); }
+-keep class com.example.musicrec.ShowPopUp { <init>(); }
+-keep class com.parse.PushService { <init>(); }
+-keep class com.parse.ParseBroadcastReceiver { <init>(); }
+-keep class com.example.musicrec.MyCustomReceiver { <init>(); }
+-keep class com.parse.GcmBroadcastReceiver { <init>(); }
+-keep class com.facebook.LoginActivity { <init>(); }
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+-keep public class * extends java.lang.annotation.Annotation {
+    *;
+}
